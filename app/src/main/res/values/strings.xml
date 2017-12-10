@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Turn It Up!</string>
+
+    <string name="select_difficulty">Select difficulty</string>
+    <string name="difficulty_easy">Easy</string>
+    <string name="difficulty_medium">Medium</string>
+    <string name="difficulty_hard">Hard</string>
+
+    <string name="no_words_left">None left</string>
+
+    <string name="m_s_left">%dm %ds left</string>
+    <string name="time_out">Time out!</string>
+</resources>
