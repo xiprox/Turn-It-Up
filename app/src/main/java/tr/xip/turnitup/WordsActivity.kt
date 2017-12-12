@@ -13,7 +13,7 @@ import java.util.*
 
 class WordsActivity : FullscreenActivity() {
     private var difficulty = Difficulty.EASY
-    private var selectedTimerDuration = TIMER_2M
+    private var selectedTimerDuration = TIMER_1_DURATION
 
     private var words: List<Word>? = null
 
@@ -54,21 +54,21 @@ class WordsActivity : FullscreenActivity() {
         }
 
         timer1.setOnClickListener {
-            selectedTimerDuration = TIMER_2M
+            selectedTimerDuration = TIMER_1_DURATION
             timer1.setTextColor(resources.getColor(R.color.colorAccentLight))
             timer2.setTextColor(resources.getColor(android.R.color.white))
             timer3.setTextColor(resources.getColor(android.R.color.white))
         }
 
         timer2.setOnClickListener {
-            selectedTimerDuration = TIMER_2p5M
+            selectedTimerDuration = TIMER_2_DURATION
             timer1.setTextColor(resources.getColor(android.R.color.white))
             timer2.setTextColor(resources.getColor(R.color.colorAccentLight))
             timer3.setTextColor(resources.getColor(android.R.color.white))
         }
 
         timer3.setOnClickListener {
-            selectedTimerDuration = TIMER_3M
+            selectedTimerDuration = TIMER_3_DURATION
             timer1.setTextColor(resources.getColor(android.R.color.white))
             timer2.setTextColor(resources.getColor(android.R.color.white))
             timer3.setTextColor(resources.getColor(R.color.colorAccentLight))
@@ -151,16 +151,16 @@ class WordsActivity : FullscreenActivity() {
     companion object {
         private val ARG_DIFFICULTY = "difficulty"
 
-        private val TIMER_2M = 120000L
-        private val TIMER_2p5M = 150000L
-        private val TIMER_3M = 180000L
+        private val TIMER_1_DURATION = 90000L
+        private val TIMER_2_DURATION = 120000L
+        private val TIMER_3_DURATION = 150000L
 
         private val FLIPPER_TIMER_SELECTION = 0
         private val FLIPPER_TIMER_STATUS = 1
 
         fun getLaunchIntent(context: Context, difficulty: Difficulty): Intent {
             val intent = Intent(context, WordsActivity::class.java)
-            intent.putExtra(ARG_DIFFICULTY, difficulty)
+            intent.putExtra(ARG_DIFFICULTY, difficulty.value)
             return intent
         }
     }

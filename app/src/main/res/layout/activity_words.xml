@@ -64,7 +64,7 @@
                 android:background="@drawable/ripple_light_oval"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
-                android:text="2m"
+                android:text="1.5m"
                 android:textColor="@color/colorAccentLight"
                 android:textSize="18sp" />
 
@@ -76,7 +76,7 @@
                 android:background="@drawable/ripple_light_oval"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
-                android:text="2.5m"
+                android:text="2m"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 
@@ -87,7 +87,7 @@
                 android:background="@drawable/ripple_light_oval"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
-                android:text="3m"
+                android:text="2.5m"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
         </LinearLayout>
